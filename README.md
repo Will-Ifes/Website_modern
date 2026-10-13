@@ -4,24 +4,28 @@ Estudo de uma página promocional com imagens de bebidas, tipografia de destaque
 
 **HTML · CSS**
 
-## Contexto
-
-Estudo de desenvolvimento web. O repositório preserva uma etapa da minha formação e permite consultar a implementação da interface.
-
-## O que o projeto apresenta
+## Destaques
 
 - Composição de produto com quatro imagens.
 - Cabeçalho de navegação e chamada visual.
 - Ícones sociais e elementos decorativos.
 
-## Por dentro do código
+<details>
+<summary><strong>Organização e código</strong></summary>
+
+### Por dentro do código
 
 | Arquivo | Responsabilidade |
 | --- | --- |
 | [`index.html`](index.html) | Estrutura e referências às imagens. |
 | [`styles.css`](styles.css) | Posicionamento, cores e composição. |
 
-## Executar localmente
+</details>
+
+<details>
+<summary><strong>Executar e consultar</strong></summary>
+
+### Executar localmente
 
 Clone o projeto e sirva a pasta com um servidor estático. Com Python 3 instalado:
 
@@ -33,9 +37,14 @@ python3 -m http.server 8080
 
 Abra http://localhost:8080. Não há instalação de dependências ou etapa de build.
 
-## Escopo e evolução
+</details>
+
+<details>
+<summary>Escopo e referências</summary>
 
 É um exercício visual, sem catálogo dinâmico, checkout ou integração de contato. Marcas e imagens são referências do estudo; o projeto não é afiliado à marca representada.
+
+</details>
 
 ---
 
