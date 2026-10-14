@@ -1,50 +1,188 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projeto de estudo não oficial de uma loja virtual inspirada na Coca-Cola. Sem fins lucrativos; nada é vendido nesta página.">
+    <meta name="robots" content="noindex">
+    <title>Estudo de loja virtual · inspirado na Coca-Cola (não oficial)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
 
+    <!-- Aviso sempre visível: a página é um estudo, não uma loja -->
+    <aside class="aviso" aria-label="Aviso sobre o projeto">
+        <p>
+            <strong>Projeto de estudo não oficial, sem fins lucrativos.</strong>
+            Nada é vendido aqui.
+            <a href="#sobre">Saiba mais</a>
+        </p>
+    </aside>
 
-        <title>Website Morderno</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    
-    <body>
-        <section>
-            <div class="circle"></div>
-            <header>
-                <a href="#"><img src="assets/logo.png" alt="logo" class="logo"></a>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main class="container">
-                <div class="text">
-                    <h2>THAT'S WHAT <br> <span> I LIKE</span></h2>
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sequi?
-                        ccusantium accusamus eius aperiam dolore exercitationem repudiandae consequatur. 
-                        Molestias reprehenderit deleniti numquam optio perferendis?
-                        icta delectus accusantium beatae. Eligendi, possimus!</P>
-                        <a href="#">VIEW ALL PRODUCTS</a>
+    <header class="topo">
+        <div class="topo-interno">
+            <a class="logo" href="#inicio">
+                <img src="assets/logo.webp" width="200" height="65" alt="Coca-Cola (estudo não oficial), voltar ao início">
+            </a>
+
+            <nav aria-label="Principal">
+                <ul class="menu" id="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre o projeto</a></li>
+                </ul>
+            </nav>
+
+            <div class="topo-acoes">
+                <button class="sacola-botao" type="button" aria-expanded="false" aria-controls="sacola">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 8h14l-1.2 12H6.2L5 8Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+                    <span class="sr-only">Sacola de demonstração,</span>
+                    <span class="sacola-contador" aria-hidden="true">0</span>
+                    <span class="sr-only sacola-contador-texto">0 itens</span>
+                </button>
+                <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">
+                    <span class="menu-icone" aria-hidden="true"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sacola" id="sacola" hidden>
+            <h2 class="sacola-titulo">Sacola de demonstração</h2>
+            <ul class="sacola-lista"></ul>
+            <p class="sacola-vazia">Sua sacola está vazia.</p>
+            <div class="sacola-rodape">
+                <p class="sacola-total">Total ilustrativo: <strong>R$ 0,00</strong></p>
+                <button class="botao" type="button" disabled aria-describedby="checkout-aviso">Finalizar compra</button>
+                <p id="checkout-aviso" class="sacola-aviso">Checkout desativado: esta página é um estudo e não vende produtos.</p>
+                <button class="link-botao sacola-limpar" type="button">Esvaziar sacola</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+            <div class="circulo" aria-hidden="true"></div>
+
+            <div class="hero-texto">
+                <p class="hero-selo">Estudo de interface</p>
+                <h1 id="hero-titulo">Isso é o que <span>eu gosto</span></h1>
+                <p>
+                    Uma vitrine inspirada na identidade da Coca-Cola para praticar layout,
+                    composição de produto e responsividade. Explore os produtos e
+                    monte uma sacola de mentira.
+                </p>
+                <div class="hero-acoes">
+                    <a class="botao" href="#produtos">Ver produtos</a>
+                    <a class="botao botao-contorno" href="#sobre">Sobre o projeto</a>
                 </div>
-            </main>
-            <ul class="icons">
-                <li><a href="#"><img src="assets/facebook.png" alt="icons"></a></li>
-                <li><a href="#"><img src="assets/twitter.png" alt="icons"></a></li>
-                <li><a href="#"><img src="assets/instagram.png" alt="icons"></a></li>
-            </ul>
-            <div class="boxImg">
-                <img src="assets/cocacola1.png" alt="" class="img1">
-                <img src="assets/cocacola2.png" alt="" class="img2">
-                <img src="assets/cocacola3.png" alt="" class="img3">
-                <img src="assets/cocacola4.png" alt="" class="img4">
+            </div>
+
+            <div class="hero-produtos" aria-hidden="true">
+                <img src="assets/cocacola1.webp" width="209" height="698" alt="" class="img1">
+                <img src="assets/cocacola2.webp" width="282" height="538" alt="" class="img2">
+                <img src="assets/cocacola3.webp" width="317" height="596" alt="" class="img3">
+                <img src="assets/cocacola4.webp" width="282" height="700" alt="" class="img4">
             </div>
         </section>
-    </body>
+
+        <section class="produtos" id="produtos" aria-labelledby="produtos-titulo">
+            <div class="secao-cabecalho">
+                <h2 id="produtos-titulo">Produtos em destaque</h2>
+                <p>Preços ilustrativos, apenas para compor o layout.</p>
+            </div>
+
+            <ul class="grade">
+                <li class="produto" data-nome="Coca-Cola Original garrafa 290 ml" data-preco="4.49">
+                    <div class="produto-foto">
+                        <span class="etiqueta">Clássica</span>
+                        <img src="assets/cocacola1.webp" width="209" height="698" alt="Garrafa de vidro de Coca-Cola Original" loading="lazy">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Coca-Cola Original</h3>
+                        <p class="produto-detalhe">Garrafa de vidro · 290 ml</p>
+                        <p class="preco"><span class="sr-only">Preço ilustrativo:</span> R$ 4,49</p>
+                        <button class="botao botao-adicionar" type="button">Adicionar<span class="some-celular"> à sacola</span></button>
+                    </div>
+                </li>
+                <li class="produto" data-nome="Coca-Cola Zero Orange Vanilla lata 350 ml" data-preco="5.29">
+                    <div class="produto-foto">
+                        <span class="etiqueta etiqueta-zero">Zero açúcar</span>
+                        <img src="assets/cocacola2.webp" width="282" height="538" alt="Lata de Coca-Cola Zero Orange Vanilla" loading="lazy">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Coca-Cola Zero Orange Vanilla</h3>
+                        <p class="produto-detalhe">Lata · 350 ml</p>
+                        <p class="preco"><span class="sr-only">Preço ilustrativo:</span> R$ 5,29</p>
+                        <button class="botao botao-adicionar" type="button">Adicionar<span class="some-celular"> à sacola</span></button>
+                    </div>
+                </li>
+                <li class="produto" data-nome="Diet Coke lata 350 ml" data-preco="4.99">
+                    <div class="produto-foto">
+                        <span class="etiqueta etiqueta-zero">Sem calorias</span>
+                        <img src="assets/cocacola3.webp" width="317" height="596" alt="Lata de Diet Coke" loading="lazy">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Diet Coke</h3>
+                        <p class="produto-detalhe">Lata · 350 ml</p>
+                        <p class="preco"><span class="sr-only">Preço ilustrativo:</span> R$ 4,99</p>
+                        <button class="botao botao-adicionar" type="button">Adicionar<span class="some-celular"> à sacola</span></button>
+                    </div>
+                </li>
+                <li class="produto" data-nome="Coca-Cola com Café Espresso lata 350 ml" data-preco="6.49">
+                    <div class="produto-foto">
+                        <span class="etiqueta etiqueta-cafe">Com café</span>
+                        <img src="assets/cocacola4.webp" width="282" height="700" alt="Lata de Coca-Cola com Café Espresso" loading="lazy">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Coca-Cola com Café Espresso</h3>
+                        <p class="produto-detalhe">Lata · 350 ml</p>
+                        <p class="preco"><span class="sr-only">Preço ilustrativo:</span> R$ 6,49</p>
+                        <button class="botao botao-adicionar" type="button">Adicionar<span class="some-celular"> à sacola</span></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+            <div class="sobre-caixa">
+                <h2 id="sobre-titulo">Sobre este projeto</h2>
+                <p>
+                    Esta página é uma <strong>cópia de estudo</strong>, feita por Will Oliveira para
+                    praticar HTML, CSS e JavaScript. Ela não é uma loja e não tem nenhuma
+                    relação com a marca representada.
+                </p>
+                <ul class="sobre-lista">
+                    <li><strong>Não oficial.</strong> Sem vínculo, patrocínio ou autorização da The Coca-Cola Company.</li>
+                    <li><strong>Sem fins lucrativos.</strong> Não há venda, anúncio nem monetização.</li>
+                    <li><strong>Marcas e imagens</strong> pertencem aos seus respectivos donos e aparecem só como referência de estudo.</li>
+                    <li><strong>Preços ilustrativos.</strong> Não correspondem a valores reais de mercado.</li>
+                    <li><strong>Nenhum dado é coletado.</strong> A sacola existe só nesta aba e some ao recarregar.</li>
+                    <li><strong>Remoção a pedido.</strong> Se algum titular de direitos preferir, o conteúdo será retirado.</li>
+                </ul>
+                <a class="botao botao-contorno" href="https://www.coca-cola.com/br/pt" target="_blank" rel="noopener noreferrer">
+                    Visitar o site oficial da Coca-Cola
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>
+            Projeto de estudo não oficial e sem fins lucrativos. Coca-Cola, Diet Coke e as
+            imagens dos produtos são marcas e propriedade da The Coca-Cola Company.
+        </p>
+        <p>
+            Desenvolvido por <a href="https://github.com/Will-Ifes" target="_blank" rel="noopener noreferrer">Will Oliveira</a>
+            como exercício de HTML, CSS e JavaScript.
+        </p>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+</body>
 </html>
