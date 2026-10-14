@@ -2,60 +2,60 @@
   <img src="./.github/readme-cover.svg" alt="Produto em cena: Imagens, tipografia e hierarquia visual." width="100%" />
 </p>
 
-# Landing page · composição visual de produto
+# Estudo de loja virtual · inspirado na Coca-Cola
 
-Estudo de uma página promocional com imagens de bebidas, tipografia de destaque e elementos de marca.
+Vitrine de e-commerce construída como exercício de HTML, CSS e JavaScript, a partir de um estudo de layout com a identidade visual da Coca-Cola. Revisada para ser responsiva, acessível e com cara de loja real, sem vender nada.
 
-**HTML · CSS**
+**HTML · CSS · JavaScript** · [Ver online](https://will-ifes.github.io/Website_modern/)
 
-## Explore o diferencial
+> [!IMPORTANT]
+> **Projeto de estudo não oficial e sem fins lucrativos.** Não tem vínculo, patrocínio ou autorização da The Coca-Cola Company. Coca-Cola, Diet Coke, os logotipos e as imagens dos produtos pertencem aos seus donos e aparecem só como referência de estudo. Os preços são ilustrativos, nada é vendido e nenhum dado é coletado. Se algum titular de direitos preferir, o conteúdo será removido.
 
-| Ponto de entrada | O que observar |
+<p align="center">
+  <img src="./.github/demo.gif" alt="Demonstração: o hero com as embalagens, dois produtos adicionados à sacola de demonstração com aviso na tela, o painel da sacola com checkout desativado e a seção Sobre este projeto." width="720" />
+</p>
+
+## O que mudou na revisão
+
+| Antes | Depois |
 | --- | --- |
-| [Produto como destaque](styles.css) | A composição usa posicionamento e contraste para organizar imagens e texto. |
-| [Estrutura promocional](index.html) | Navegação, imagem principal e redes sociais compõem uma página curta. |
+| Só funcionava em 1920×1080; no celular as latas cobriam o texto e o menu sumia | Layout em grid com breakpoints em 1024px, 860px e 480px e menu com botão no celular |
+| Uma única tela de hero | Vitrine com cabeçalho fixo, grade de produtos, sacola e seção sobre o projeto |
+| Nenhuma menção ao caráter de estudo | Faixa de aviso fixa no topo, seção "Sobre este projeto", rodapé e `noindex` |
+| 4 PNGs de ~300 KB cada | WebP de 32 a 47 KB, com transparência mantida |
+| Fonte Poppins com `@import` quebrado (nunca carregava) | Poppins via `<link>` com `preconnect` |
+| Lorem ipsum em inglês e links para `#` | Texto em português e âncoras para seções reais |
+| Ícones sociais com `alt="icons"` | Ícones removidos e imagens com `alt` descritivo |
+| Sem `h1` e sem foco visível | Hierarquia de títulos, foco destacado e link "Pular para o conteúdo" |
 
-## Destaques
+### Sacola de demonstração
 
-- Composição de produto com quatro imagens.
-- Cabeçalho de navegação e chamada visual.
-- Ícones sociais e elementos decorativos.
+- Fica só em memória e some ao recarregar a página. Nada é salvo nem enviado.
+- O contador do cabeçalho é anunciado ao leitor de tela, e cada produto adicionado mostra um aviso flutuante (`role="status"`) lembrando que a página não vende.
+- O botão "Finalizar compra" fica desativado, com a explicação ligada por `aria-describedby`.
+- Esc fecha a sacola e o menu e devolve o foco ao botão.
 
-<details>
-<summary><strong>Organização e código</strong></summary>
+**Validação:** axe-core sem violações, com a sacola e o menu abertos, e sem rolagem horizontal em 375px, 768px e 1366px.
 
-### Por dentro do código
+## Por dentro do código
 
 | Arquivo | Responsabilidade |
 | --- | --- |
-| [`index.html`](index.html) | Estrutura e referências às imagens. |
-| [`styles.css`](styles.css) | Posicionamento, cores e composição. |
+| [`index.html`](index.html) | Estrutura da vitrine, avisos e dados dos produtos (`data-nome`, `data-preco`). |
+| [`styles.css`](styles.css) | Tokens, hero com `clip-path`, grade de produtos e breakpoints. |
+| [`script.js`](script.js) | Menu do celular, sacola em memória e avisos. |
 
-</details>
+## Executar localmente
 
-<details>
-<summary><strong>Executar e consultar</strong></summary>
-
-### Executar localmente
-
-Clone o projeto e sirva a pasta com um servidor estático. Com Python 3 instalado:
+Não há dependências nem build. Com Python 3:
 
 ```bash
 git clone https://github.com/Will-Ifes/Website_modern.git
 cd Website_modern
-python3 -m http.server 8080
+python -m http.server 8080
 ```
 
-Abra http://localhost:8080. Não há instalação de dependências ou etapa de build.
-
-</details>
-
-<details>
-<summary>Escopo e referências</summary>
-
-É um exercício visual, sem catálogo dinâmico, checkout ou integração de contato. Marcas e imagens são referências do estudo; o projeto não é afiliado à marca representada.
-
-</details>
+Abra http://localhost:8080.
 
 ---
 
