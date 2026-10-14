@@ -1,8 +1,19 @@
+<p align="center">
+  <img src="./.github/readme-cover.svg" alt="Produto em cena: Imagens, tipografia e hierarquia visual." width="100%" />
+</p>
+
 # Landing page · composição visual de produto
 
 Estudo de uma página promocional com imagens de bebidas, tipografia de destaque e elementos de marca.
 
 **HTML · CSS**
+
+## Explore o diferencial
+
+| Ponto de entrada | O que observar |
+| --- | --- |
+| [Produto como destaque](styles.css) | A composição usa posicionamento e contraste para organizar imagens e texto. |
+| [Estrutura promocional](index.html) | Navegação, imagem principal e redes sociais compõem uma página curta. |
 
 ## Destaques
 
