@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="./.github/readme-cover.svg" alt="Produto em cena: Imagens, tipografia e hierarquia visual." width="100%" />
+  <a href="https://will-ifes.github.io/Website_modern/">
+    <img src="./.github/readme-cover.svg?v=20261016" alt="Produto em cena. Vitrine preta e vermelha com sacola de demonstração." width="100%" />
+  </a>
 </p>
 
 # Estudo de loja virtual · inspirado na Coca-Cola
@@ -12,7 +14,11 @@ Vitrine de e-commerce construída como exercício de HTML, CSS e JavaScript, a p
 > **Projeto de estudo não oficial e sem fins lucrativos.** Não tem vínculo, patrocínio ou autorização da The Coca-Cola Company. Coca-Cola, Diet Coke, os logotipos e as imagens dos produtos pertencem aos seus donos e aparecem só como referência de estudo. Os preços são ilustrativos, nada é vendido e nenhum dado é coletado. Se algum titular de direitos preferir, o conteúdo será removido.
 
 <p align="center">
-  <img src="./.github/demo.gif" alt="Demonstração: o hero com as embalagens, dois produtos adicionados à sacola de demonstração com aviso na tela, o painel da sacola com checkout desativado e a seção Sobre este projeto." width="720" />
+  <a href="https://will-ifes.github.io/Website_modern/">
+    <img src="./.github/demo.gif" alt="Demonstração: o hero com as embalagens, dois produtos adicionados à sacola de demonstração com aviso na tela, o painel da sacola com checkout desativado e a seção Sobre este projeto." width="720" />
+  </a>
+  <br />
+  <sub>Clique na demonstração para abrir a página publicada.</sub>
 </p>
 
 ## O que mudou na revisão
